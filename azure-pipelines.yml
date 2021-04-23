@@ -5,4 +5,21 @@ pool:
   vmImage: windows-2019
 
 steps:
+ - task: DownloadSecureFile@1
+   name: mySecureFile
+   inputs:
+    secureFile: 'deploy.auto.pkrvars.hcl'
+
  - task: PackerBuild@1
+   inputs:
+    templateType: builtin
+    ConnectedServiceName:
+    location:
+    storageAccountName:
+    azureResourceGroup:
+    packagePath:
+    deployScriptPath:
+
+ - task: DeleteFiles@1
+   inputs:
+    Contents: $(mySecureFile.secureFilePath)
