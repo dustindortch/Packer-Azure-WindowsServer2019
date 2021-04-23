@@ -1,0 +1,8 @@
+trigger:
+- main
+
+pool:
+  vmImage: windows-2019
+
+steps:
+ - task: PackerBuild@1
