@@ -1,5 +1,7 @@
 # Packer-Azure-WindowsServer2019
 
+[![Build Status](https://dev.azure.com/DustinDortch/Packer-Azure-WindowsServer2019/_apis/build/status/dustindortch.Packer-Azure-WindowsServer2019?branchName=main)](https://dev.azure.com/DustinDortch/Packer-Azure-WindowsServer2019/_build/latest?definitionId=7&branchName=main)
+
 ## Purpose
 
 A simple example of an Azure Managed Image build using Packer in Azure Pipelines.  The pipeline is also simple:
