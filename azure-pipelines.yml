@@ -10,16 +10,10 @@ steps:
    inputs:
     secureFile: 'deploy.auto.pkrvars.hcl'
 
- - task: CopyFiles@2
-   inputs:
-    contents: $(mySecureFile.secureFilePath)
-    TargetFolder: $(Build.SourcesDirectory)
-
  - script: |
-    packer build .
+    packer build -var-file="$(mySecureFile.secureFilePath)" .
 
  - task: DeleteFiles@1
    inputs:
     Contents: |
      $(mySecureFile.secureFilePath)
-     $(Build.SourcesDirectory)\*.pkrvars.hcl
