@@ -7,7 +7,7 @@ A simple example of an Azure Managed Image build using Packer in Azure Pipelines
 * Triggered on commit to "main" branch of my repository
 * Build agent is Windows Server 2019
 * DownloadSecureFile@1 used to download my pkrvars.hcl file for variable input, referenced as `$(mySecureFGile.secureFilePath)`
-* Manaul execution of Packer as a command instead of using PackerBuild@1 because it expects parameters that aren't needed if they are handled within the definition
+* Manual execution of Packer as a command instead of using PackerBuild@1 because it expects parameters that aren't needed if they are handled within the definition
 * DeleteFiles@1 to cleanup the previous secure file
 
 ## Packer image definition
