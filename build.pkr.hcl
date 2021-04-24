@@ -32,7 +32,10 @@ build {
             "./scripts/wait.ps1",
             "./scripts/chocolatey.ps1",
             "./scripts/build.ps1",
-            "./scripts/sysprep.ps1"
         ]
+    }
+
+    provisioner "powershell" {
+        script = "./scripts/sysprep.ps1"
     }
 }

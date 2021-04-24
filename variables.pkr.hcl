@@ -16,12 +16,12 @@ variable "TENANT_ID" {
 }
 
 variable "RESOURCE_GROUP_NAME" {
-    type    = string
-    default = "East US"
+    type = string
 }
 
 variable "LOCATION" {
-    type = string
+    type    = string
+    default = "East US"
     validation {
         condition = contains(
             split("\r\n",file("./azure_regions.txt")),
