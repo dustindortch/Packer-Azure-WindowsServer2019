@@ -37,11 +37,11 @@ variable "PREFIX" {
 }
 
 variable "CHOCO_REPO_NAME" {
-    type = "string"
+    type = string
 }
 
 variable "CHOCO_REPO_URL" {
-    type = "string"
+    type = string
 }
 
 variable "CHOCO_REPO_USERNAME" {
