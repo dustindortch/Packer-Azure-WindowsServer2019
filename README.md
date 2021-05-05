@@ -17,8 +17,8 @@ A simple example of an Azure Managed Image build using Packer in Azure Pipelines
 The image defaults to a Windows Server 2019 image from Azure (2019-datacenter) as the source image.  Four PowerShell scripts are executed:
 
 * Wait.ps1 - waits for specific services to be in a running state
-* Chocolately.ps1 - installs Chocolatey
-* Build.ps1 - Installs PowerShell 7 and Git via Chocolatey, just as an example
+* Chocolately.ps1 - installs Chocolatey and adds a private NuGet repo to Chocolatey stored in Azure Artifacts
+* Build.ps1 - Installs PowerShell 7, Git, and PuTTy (from the private repo) via Chocolatey, just as an example
 * Sysprep.ps1 - Generalizes the install as necessary prior to making the image
 
 ## Real golden image tasks
