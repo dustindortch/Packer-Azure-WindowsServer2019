@@ -18,7 +18,7 @@ Invoke-Expression ((New-Object System.Net.WebClient).DownloadString($DownloadUrl
 
 $validExitCodes = @(0, 3010)
 
-$command = "choco.exe source add -n=${RepoName} -s=""${RepoURL}"" -u=""${RepoUsername}"" -p=""${RepoToken}"""
+$command = "choco.exe source add -n=${RepoName} -s=""${RepoURL}"" -u=""${RepoUsername}"" -p=""${RepoToken}"" --priority=10"
 
 Invoke-Expression -Command $command
 

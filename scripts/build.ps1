@@ -2,8 +2,9 @@
 param (
     [ValidateNotNullOrEmpty()]
     $Packages = @(
-        @{ name = 'powershell-core'}
-        @{ name = 'git'}
+        @{name = 'powershell-core'}
+        @{name = 'git'}
+        @{name = 'putty.install'}
     )
 )
 
