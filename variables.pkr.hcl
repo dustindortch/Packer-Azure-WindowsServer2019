@@ -36,6 +36,23 @@ variable "PREFIX" {
     default = "GoldenImage_"
 }
 
+variable "CHOCO_REPO_NAME" {
+    type = "string"
+}
+
+variable "CHOCO_REPO_URL" {
+    type = "string"
+}
+
+variable "CHOCO_REPO_USERNAME" {
+    type = string
+}
+
+variable "choco_repo_token" {
+    type      = string
+    sensitive = true
+}
+
 variable "IMAGE" {
     type = object({
         communicator = string

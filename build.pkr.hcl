@@ -28,6 +28,12 @@ build {
     sources = ["sources.azure-arm.image"]
 
     provisioner "powershell" {
+        environment_vars = [
+            "RepoName=${var.CHOCO_REPO_NAME}",
+            "RepoURL= ${var.CHOCO_REPO_URL}",
+            "RepoUsername=${var.CHOCO_REPO_USERNAME}",
+            "RepoToken=${var.choco_repo_token}"
+        ]
         scripts = [
             "./scripts/wait.ps1",
             "./scripts/chocolatey.ps1",
