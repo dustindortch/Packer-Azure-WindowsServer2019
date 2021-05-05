@@ -24,3 +24,7 @@ The image defaults to a Windows Server 2019 image from Azure (2019-datacenter) a
 ## Real golden image tasks
 
 A real golden image would have all of the utilities and agents that would be required on all systems and required OS hardening for compliance.
+
+## Changes
+
+I created a NuGet repository with Azure Artifacts to use as a private Chocolatey repository following [Build a Chocolatey Package Repository using Azure DevOps Artifacts Feed](https://blog.pauby.com/post/chocolatey-repository-using-azure-devops-artifacts-feed/).  I then added varibles to the `variables.pkr.hcl`, modified `chocolatey.ps1` to access parameters that are supplied by those variables and add the private repo as a Chocolatey source, then modified `build.pkr.hcl` to set the variables for the PowerShell script to consume.
