@@ -5,7 +5,6 @@ param (
         @{name = 'powershell-core'}
         @{name = 'git'}
         @{name = 'putty.install'}
-        @{name = 'terraform'}
     )
 )
 
